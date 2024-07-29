@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.binuka.deeplink",
+      "package_name": "com.directfn.universal_alawwal_uat",
       "sha256_cert_fingerprints":
-        ["82:8E:C3:F5:11:C5:AD:ED:B2:92:95:1A:AC:D2:01:84:A8:18:44:15:16:6C:D5:05:2A:01:1D:31:92:93:70:BC"]
+        ["4A:95:8B:F5:C2:7C:19:25:E1:1F:AA:D1:72:D3:37:B9:1A:06:7A:2E:87:67:DE:36:A4:58:E0:3B:08:A3:88:8E"]
     }
   }
 ]
