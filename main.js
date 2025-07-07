@@ -1,6 +1,6 @@
 // Replace with your Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyD0fNYSBOlqq6qzjz5a4Kd8ugcAT2rcEag",
+    apiKey: "AIzaSyD0fNYSBOlqq6qzjz5a4Kd8ugcAT2rcEag",
     authDomain: "webtestapp-6b381.firebaseapp.com",
     projectId: "webtestapp-6b381",
     storageBucket: "webtestapp-6b381.firebasestorage.app",
@@ -15,16 +15,19 @@ const vapidKey = "BOpyILiKsgS9WP-RQZVR8fg3fnBSFxJyTjy19VYmE9DnpWQauczXuDbxgOwEEG
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
+// Register the service worker and then get the token
 navigator.serviceWorker.register('firebase-messaging-sw.js')
-  .then((registration) => {
-    messaging.useServiceWorker(registration);
-
+  .then(async (registration) => {
     console.log("Service worker registered");
 
-    // Call this only after service worker is ready
+    // Expose globally so it can be called from button
     window.getFcmToken = async function () {
       try {
-        const token = await messaging.getToken({ vapidKey, serviceWorkerRegistration: registration });
+        const token = await messaging.getToken({
+          vapidKey,
+          serviceWorkerRegistration: registration
+        });
+
         if (token) {
           document.getElementById("token").textContent = token;
           console.log("FCM Token:", token);
