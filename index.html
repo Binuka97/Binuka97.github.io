@@ -1,44 +1,18 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!-- <link rel="alternate" href="android-app://com.binuka.wordtool/https/binuka97.github.io" />
-		<link rel="alternate" href="android-app://com.binuka.deeplink/https/binuka97.github.io" /> -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	
-	<body>
-		<script src="assets/js/index.js"></script>
-		<!-- <button onclick="myFunc()">CLICK ME!</button> -->
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-					<section class="intro">
-						<header>
-							<h1>SAB Invest</h1>
-							<p>SAB Invest QA</p>
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
-							<p><a href="https://binuka97.github.io/?sso=AAC$$jkfd1234" target=”_blank”>Start Trading now!</a></p>
-							<nav>
-								<a href="ClientWebConnector/news.html" target=”_blank”>ClientWebConnector Path</a>
-							</nav>
-						</header>
-					</section>
-			</div>
+<head>
+    <title>Get FCM Token</title>
+</head>
+<body>
+    <h1>FCM Token Generator</h1>
+    <button onclick="getToken()">Get Token</button>
+    <pre id="output"></pre>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-messaging-compat.js"></script>
 
-	</body>
+    <script src="firebase-config.js"></script>
+    <script src="main.js"></script>
+</body>
 </html>
