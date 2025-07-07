@@ -29,8 +29,9 @@ navigator.serviceWorker.register('firebase-messaging-sw.js')
         });
 
         if (token) {
-          document.getElementById("token").textContent = token;
-          console.log("FCM Token:", token);
+        document.getElementById("token").textContent = token;
+        document.getElementById("copyTokenBtn").style.display = "inline-block";
+        console.log("FCM Token:", token);
         } else {
           console.warn("No registration token available.");
         }
@@ -42,3 +43,22 @@ navigator.serviceWorker.register('firebase-messaging-sw.js')
   .catch((err) => {
     console.error("Service worker registration failed:", err);
   });
+
+
+  // Function to copy the token to clipboard
+window.copyToken = function () {
+  const tokenElement = document.getElementById("token");
+  const token = tokenElement.textContent;
+
+  if (!token) {
+    alert("No token to copy!");
+    return;
+  }
+
+  navigator.clipboard.writeText(token).then(() => {
+    alert("FCM token copied to clipboard!");
+  }).catch((err) => {
+    console.error("Failed to copy token:", err);
+    alert("Failed to copy token.");
+  });
+};

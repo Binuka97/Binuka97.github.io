@@ -6,10 +6,17 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js"></script>
   <script src="main.js" defer></script>
+   <style>
+    #copyTokenBtn {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <h2>Get FCM Token</h2>
   <button onclick="getFcmToken()">Get Token</button>
-  <p id="token"></p>
+  <p id="token" style="word-break: break-all;"></p>
+  <button id="copyTokenBtn" onclick="copyToken()">Copy Token</button>
 </body>
 </html>
