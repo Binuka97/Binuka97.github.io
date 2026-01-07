@@ -4,8 +4,9 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.directfn.universal_alawwal_qa",
-      "sha256_cert_fingerprints":
-        ["EC:A0:AB:8E:9A:C4:E4:10:53:66:50:70:BD:FC:B2:00:12:46:92:58:43:10:31:11:88:42:55:8F:B4:4D:B8:9E"]
+      "sha256_cert_fingerprints": [
+        "EC:A0:AB:8E:9A:C4:E4:10:53:66:50:70:BD:FC:B2:00:12:46:92:58:43:10:31:11:88:42:55:8F:B4:4D:B8:9E"
+      ]
     }
   }
 ]
