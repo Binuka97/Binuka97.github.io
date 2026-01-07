@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.directfn.universal_alawwal_qa",
+      "package_name": "net.directfn.prod.android",
       "sha256_cert_fingerprints":
-        ["EC:A0:AB:8E:9A:C4:E4:10:53:66:50:70:BD:FC:B2:00:12:46:92:58:43:10:31:11:88:42:55:8F:B4:4D:B8:9E"]
+        ["F7:A6:24:2A:36:69:F2:20:2D:B9:40:27:C3:9E:A1:4E:8D:99:CE:12:CF:92:C9:82:2E:C4:1C:57:46:1B:BB:21", "4E:6E:15:F1:63:BD:DC:AD:C8:F2:6A:D5:0C:55:CF:98:FD:36:97:99:38:F5:27:26:DA:B0:8D:B9:7C:9C:BF:0E"]
     }
   }
 ]
