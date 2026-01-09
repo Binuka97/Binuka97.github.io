@@ -6,7 +6,9 @@
         "appID": "C98R689E4K.com.directfn.universal-alawwal-qa-mobile",
         "paths": [
           "/ClientWebConnector",
-          "/ClientWebConnector/*"
+          "/ClientWebConnector/*",
+          "/ClientWebConnector/store",
+          "/ClientWebConnector/store/"
         ]
       }
     ]
