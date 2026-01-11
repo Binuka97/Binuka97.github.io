@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download SAB Invest</title>
+    
+    <meta name="apple-itunes-app" content="app-id=554082905">
+    
+    <style>
+        :root {
+            --sab-red: #DB0011;
+            --sab-dark-red: #b2000d;
+            --bg-gray: #f4f4f4;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--sab-red);
+            height: 5px;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+
+        .card.hidden {
+            display: none;
+        }
+
+        .logo-placeholder {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            height: 35px;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+        }
+
+        .store-badge {
+            width: 180px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .store-badge.android-size {
+            width: 220px;
+        }
+
+        .store-badge:active {
+            transform: scale(0.95);
+        }
+
+        .redirect-timer {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--sab-red);
+            font-weight: 500;
+        }
+
+        .redirect-timer.hidden {
+            display: none;
+        }
+
+        .info-section {
+            margin-top: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+        }
+
+        .info-text {
+            margin-bottom: 5px;
+        }
+
+        .link-url {
+            color: #0076d1;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+
+        .thank-you {
+            font-weight: bold;
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 15px;
+        }
+
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        .lang-switch {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: #0076d1;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .lang-btn:hover {
+            color: var(--sab-red);
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <div class="container">
+        <!-- English Content -->
+        <div id="content-en" class="card">
+            <div class="logo-placeholder">
+                <img src="assets/images/sab-invest-logo.png" alt="SAB Invest Logo" class="logo">
+            </div>
+            <h1 data-i18n="salutation"></h1>
+            <p data-i18n="body"></p>
+            
+            <img class="store-badge" data-badge="en" alt="Download from store">
+
+            <div class="redirect-timer" data-timer="en"></div>
+
+            <div class="info-section">
+                <p class="info-text" data-i18n="moreInfo"></p>
+                <a href="https://www.sabinvest.com/en/sab-invest" target="_blank" rel="noopener noreferrer" class="link-url">sabinvest.com/en/sab-invest</a>
+                <div class="thank-you" data-i18n="thanks"></div>
+                <div class="footer-note" data-i18n="license"></div>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn" data-lang-switch="ar">العربية</button>
+            </div>
+        </div>
+
+        <!-- Arabic Content -->
+        <div id="content-ar" class="card hidden" dir="rtl">
+            <div class="logo-placeholder">
+                <img src="assets/images/sab-invest-logo.png" alt="الأول للاستثمار" class="logo">
+            </div>
+            <h1 data-i18n="salutation"></h1>
+            <p data-i18n="body"></p>
+            
+            <img class="store-badge" data-badge="ar" alt="تحميل من المتجر">
+
+            <div class="redirect-timer" data-timer="ar"></div>
+
+            <div class="info-section">
+                <p class="info-text" data-i18n="moreInfo"></p>
+                <a href="https://www.sabinvest.com/ar/sab-invest" target="_blank" rel="noopener noreferrer" class="link-url">sabinvest.com/ar/sab-invest</a>
+                <div class="thank-you" data-i18n="thanks"></div>
+                <div class="footer-note" data-i18n="license"></div>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn" data-lang-switch="en">English</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // Configuration
+            const CONFIG = {
+                redirectDelay: 3,
+                links: {
+                    ios: "https://apps.apple.com/us/app/sab-invest-trade/id554082905",
+                    android: "https://play.google.com/store/apps/details?id=net.directfn.prod.android"
+                },
+                badges: {
+                    ios: "https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg",
+                    android: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                },
+                content: {
+                    en: {
+                        salutation: "Dear Customer,",
+                        body: "In order to avail yourself of SAB Invest's Saudi Market Trading Platform, download our App on your smart device:",
+                        moreInfo: "For more info, call 8001242442 or visit:",
+                        thanks: "Thank you for choosing SAB Invest.",
+                        license: "(Licensed by CMA)",
+                        redirectBase: "Redirecting to ",
+                        in: " in "
+                    },
+                    ar: {
+                        salutation: "عزيزي العميل،",
+                        body: "للاستفادة من الخدمات المقدمة عبر منصة الأول للاستثمار للتداول في السوق السعودي، نرجو منكم تحميل التطبيق على الأجهزة الذكية:",
+                        moreInfo: "لمزيد من المعلومات، الرجاء الاتصال على 8001242442 أو زيارة:",
+                        thanks: "شكراً لاختياركم شركة الأول للاستثمار.",
+                        license: "(شركة مرخصة من قبل هيئة السوق المالية)",
+                        redirectBase: "سيتم تحويلك إلى ",
+                        in: " خلال "
+                    }
+                }
+            };
+
+            // State
+            let currentOS = null;
+            let currentLang = 'en';
+
+            // Utility Functions
+            function detectOS() {
+                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    return 'ios';
+                }
+                
+                // Default to Android for all other cases (mobile-only page)
+                return 'android';
+            }
+
+            function getStoreLink() {
+                return CONFIG.links[currentOS];
+            }
+
+            function getStoreName(lang) {
+                if (currentOS === 'ios') {
+                    return 'App Store';
+                }
+                return lang === 'ar' ? 'Google Play' : 'Play Store';
+            }
+
+            // UI Functions
+            function updateContent(lang) {
+                const content = CONFIG.content[lang];
+                const elements = document.querySelectorAll(`#content-${lang} [data-i18n]`);
+                
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (content[key]) {
+                        element.textContent = content[key];
+                    }
+                });
+            }
+
+            function updateBadges() {
+                const isAndroid = currentOS === 'android';
+                const badgeSrc = CONFIG.badges[currentOS];
+                
+                document.querySelectorAll('.store-badge').forEach(badge => {
+                    badge.src = badgeSrc;
+                    badge.classList.toggle('android-size', isAndroid);
+                });
+            }
+
+            function switchLanguage(lang) {
+                currentLang = lang;
+                
+                const enContent = document.getElementById('content-en');
+                const arContent = document.getElementById('content-ar');
+                
+                if (lang === 'en') {
+                    enContent.classList.remove('hidden');
+                    arContent.classList.add('hidden');
+                } else {
+                    enContent.classList.add('hidden');
+                    arContent.classList.remove('hidden');
+                }
+            }
+
+            function navigateToStore() {
+                window.location.href = getStoreLink();
+            }
+
+            function startRedirectTimer() {
+                let timeLeft = CONFIG.redirectDelay;
+                
+                function updateTimers() {
+                    ['en', 'ar'].forEach(lang => {
+                        const timer = document.querySelector(`[data-timer="${lang}"]`);
+                        const content = CONFIG.content[lang];
+                        const storeName = getStoreName(lang);
+                        const suffix = lang === 'ar' ? ' ثوانٍ...' : 's...';
+                        
+                        if (timer) {
+                            timer.textContent = `${content.redirectBase}${storeName}${content.in}${timeLeft}${suffix}`;
+                        }
+                    });
+                }
+
+                updateTimers();
+
+                const interval = setInterval(() => {
+                    timeLeft--;
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(interval);
+                        navigateToStore();
+                    } else {
+                        updateTimers();
+                    }
+                }, 1000);
+            }
+
+            function initialize() {
+                currentOS = detectOS();
+                
+                // Update content for both languages
+                updateContent('en');
+                updateContent('ar');
+                
+                // Update badges based on OS
+                updateBadges();
+                
+                // Set up event listeners
+                document.querySelectorAll('[data-lang-switch]').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const lang = button.getAttribute('data-lang-switch');
+                        switchLanguage(lang);
+                    });
+                });
+
+                document.querySelectorAll('.store-badge').forEach(badge => {
+                    badge.addEventListener('click', navigateToStore);
+                });
+
+                // Start automatic redirect timer
+                startRedirectTimer();
+            }
+
+            // Initialize on DOM ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initialize);
+            } else {
+                initialize();
+            }
+        })();
+    </script>
+</body>
+</html>
