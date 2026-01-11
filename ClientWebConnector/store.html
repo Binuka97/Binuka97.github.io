@@ -21,16 +21,6 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            overscroll-behavior: none;
-            touch-action: manipulation;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;       /* kill ghost scroll */
         }
 
         body {
@@ -40,7 +30,7 @@
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            height: 100dvh;         /* REAL mobile viewport */
+            min-height: 100vh;
         }
 
         header {
@@ -51,12 +41,9 @@
 
         .container {
             max-width: 500px;
-            width: 100%;
             margin: 10px auto;
             padding: 20px;
-            flex: 1;
-            overflow-y: auto;      /* scroll only if really needed */
-            overscroll-behavior: contain;
+            width: 100%;
         }
 
         .card {
@@ -242,8 +229,8 @@
                     android: "https://play.google.com/store/apps/details?id=net.directfn.prod.android"
                 },
                 badges: {
-                    ios: "https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg",
-                    android: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                    ios: "assets/images/appstore.png",
+                    android: "assets/images/playstore.png"
                 },
                 content: {
                     en: {
